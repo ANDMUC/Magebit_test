@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(images/background.jpg);
+  background-size: cover;
+}
+
+/* VISA EKRAANA DIVS */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* CAURSPIDIGAIS MELNAIS DIVS */
+
+.center-div {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 70vw;
+  height: 50vh;
+  display: flex;
+  position: relative;
+}
+
+/* "HAVE AN ACCOUNT?" & "DON'T HAVE AN ACCOUNT?"*/
+
+.sign-up,
+.login {
+  height: 100%;
+  width: 50%;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sign-up h1,
+.login h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.sign-up p,
+.login p {
+  text-align: left;
+  line-height: 30px;
+  width: 90%;
+}
+
+.sign-up button,
+.login button {
+  outline: none;
+  width: 100px;
+  height: 40px;
+  background-color: unset;
+  border: 2px solid rgb(69, 161, 192);
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.25s;
+  cursor: pointer;
+}
+
+.sign-up button:hover,
+.login button:hover {
+  background-color: rgb(129, 165, 187);
+  border: none;
+}
+
+/* <hr> gan "HAVE AN ACCOUNT?", gan "DON'T HAVE AN ACCOUNT?"*/
+
+.horizontal-line {
+  border: 1.5px solid rgb(69, 161, 192);
+  background: rgb(69, 161, 192);
+  width: 10%;
+}
+
+.baltais-login {
+  color: grey;
+  position: absolute;
+  transform: translateX(118%);
+  width: 45%;
+  height: 110%;
+  background-color: white;
+  top: -15px;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: space-evenly; */
+  align-items: center;
+  justify-content: center;
+}
+
+/* FORM */
+
+.login-form {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.baltais-signup {
+  color: grey;
+  position: absolute;
+  transform: translateX(4%);
+  width: 45%;
+  height: 110%;
+  background-color: white;
+  top: -15px;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: space-evenly; */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* FORM */
+
+.signup-form {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.baltais-login input,
+.baltais-signup input {
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  border-bottom: 1px lightgrey solid;
+}
+
+.baltais-login .buttonField button,
+.baltais-signup .buttonField button {
+  outline: none;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: rgb(206, 109, 29);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.baltais-login .buttonField button:hover,
+.baltais-signup .buttonField button:hover {
+  background-color: rgba(228, 95, 23, 0.849);
+}
+
+.baltais-login div,
+.baltais-signup div {
+  width: 100%;
+}
+
+.nameInput,
+.signUpLogo,
+.emailInput,
+.passwordInput,
+.buttonField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.error-message {
+  color: rgb(190, 49, 49);
+}
+
+.success-message {
+  color: rgb(40, 148, 40);
+}
+
+/* FULLSCREEN ANIMATION - baltais Login logs peld pa kreisi*/
+
+@keyframes baltaisLoginAnimation {
+  0% {
+    transform: translateX(118%);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(8%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* FULLSCREEN ANIMATION - baltais Sign Up logs paraadaas */
+
+@keyframes baltaisSignUpAppears {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* 80% {
+    opacity: 0.8;
+  } */
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* FULLSCREEN ANIMATION - baltais Sign Up logs peld pa labi */
+
+@keyframes baltaisSignUpAnimation {
+  0% {
+    transform: translateX(4%);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(114%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* FULLSCREEN ANIMATION - baltais Login logs paraadaas */
+
+@keyframes baltaisLoginAppears {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* 80% {
+    opacity: 0.8;
+  } */
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .center-div {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .container {
+    height: 200vh;
+    overflow-x: hidden;
+  }
+
+  .center-div {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .sign-up {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 600px;
+  }
+
+  .login {
+    width: 50%;
+    height: 50%;
+  }
+
+  .baltais-login {
+    top: 0;
+    height: 50%;
+    width: 100%;
+    transform: translateX(0%);
+  }
+  .baltais-signup {
+    top: 600px;
+    height: 50%;
+    width: 100%;
+    transform: translateX(0%);
+  }
+}

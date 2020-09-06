@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(images/background.jpg);
+  background-size: cover;
+}
+
+/* VISA EKRAANA DIVS */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* CAURSPIDIGAIS MELNAIS DIVS */
+
+.center-div {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 70vw;
+  height: 50vh;
+}
+
+.logged-in {
+  margin: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logged-in p {
+  color: white;
+  margin-right: 5px;
+}
+
+.logout-button {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  width: 70px;
+  height: 30px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: rgba(177, 164, 164, 0.603);
+  color: black;
+  font-weight: bold;
+}
